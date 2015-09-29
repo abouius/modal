@@ -1,0 +1,20 @@
+{
+  "name": "modal",
+  "version": "1.0.1",
+  "description": "responsive jquery modal plugin",
+  "main": "src/modal.js",
+  "authors": [
+    "Ari Bouius <abouius@rent.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.8.0"
+  }
+}

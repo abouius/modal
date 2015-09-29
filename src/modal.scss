@@ -1,0 +1,78 @@
+html.modal-ios,
+html.modal-ios body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: -1000px;
+  right: -1000px;
+  bottom: -1000px;
+  left: -1000px;
+  z-index: 100020;
+  background: #000;
+  opacity: 0.65;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=65)";
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 100021;
+  overflow: hidden;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+
+  &:after {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+  }
+
+  &.modal-is-open {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.modal {
+  display: none;
+  position: relative;
+  text-align: left;
+  overflow: auto;
+  margin: 30px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &.modal-is-open {
+    display: inline-block;
+  }
+}
+
+.modal,
+.modal-container:after {
+  vertical-align: middle;
+}
+
+.modal-align-top .modal,
+.modal-align-top:after {
+  vertical-align: top;
+}
+
+.modal-align-bottom .modal,
+.modal-align-bottom:after {
+  vertical-align: bottom;
+}
